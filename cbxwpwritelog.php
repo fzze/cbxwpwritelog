@@ -7,7 +7,7 @@
 	 * @package           cbxwpwritelog
 	 *
 	 * @wordpress-plugin
-	 * Plugin Name:       CBX WP Write Log
+	 * Plugin Name:       WP Write Log -fz
 	 * Plugin URI:        https://github.com/manchumahara/cbxwpwritelog
 	 * Description:       This plugin adds a helper function to write log in wordpress debug file. This plugin also writes email send fail logs
 	 * Version:           1.0.3
