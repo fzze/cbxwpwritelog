@@ -43,16 +43,20 @@
 		 *
 		 * @param string|array|object $log
 		 */
+		
+		function my_error_log(){
+			file_put_contents(WP_CONTENT_DIR.'dev.log', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+		}
 		function write_log( $log ) {
 			if ( true === WP_DEBUG ) {
 				if ( is_array( $log ) || is_object( $log ) ) {
-					error_log( print_r( $log, true ) );
+					my_error_log( print_r( $log, true ) );
 				}
 				else if(is_bool($log)) {
-					error_log( ($log == true)? 'true': 'false' );
+					my_error_log( ($log == true)? 'true': 'false' );
 				}
 				else {
-					error_log( $log );
+					my_error_log( $log );
 				}
 			}
 		}
