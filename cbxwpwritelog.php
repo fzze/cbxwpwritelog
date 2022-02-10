@@ -44,8 +44,8 @@
 		 * @param string|array|object $log
 		 */
 		
-		function my_error_log(){
-			file_put_contents(WP_CONTENT_DIR.'dev.log', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+		function my_error_log($log){
+			file_put_contents(WP_CONTENT_DIR.'dev.log', $log, FILE_APPEND | LOCK_EX);
 		}
 		function write_log( $log ) {
 			if ( true === WP_DEBUG ) {
